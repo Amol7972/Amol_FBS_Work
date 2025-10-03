@@ -1,0 +1,69 @@
+Set A
+FRN-13J0725/066
+
+1. select name, salary from employees
+   order by salary desc;
+
+2. select * from employee
+   order by salary desc
+   limit 5;
+
+3. select * from employee limit 3, 5;
+
+4. select count(*) from employees
+   group by department;
+
+5. select avg(salary) from employees
+   where avg(salary) > 50000;
+
+6. select products from products
+   where products like "%Laptop%";
+
+7. 
+
+
+8. select * from students
+   where name = 'A%';
+
+9. select orders, count(*) from monthly_order
+   where orders > 100;
+
+10. select sum(sales_amount), avg(sales_amount) from sales
+    group by category
+    having sum(sales_amount) > 100000;
+
+11. a) The total number of employees 
+
+12. b) 8 
+
+13. c) HAVING 
+
+14. b) Returns all rows from the left table and matching rows from the right table 
+
+15. b) HELLO WORLD 
+
+16. select O.sum(total_amount), C.region
+    from orders O inner join customers C
+    on O.order_id = C.customer_id
+    group by region
+    having O.sum(total_amount) > 10000;
+
+
+17. Question: 
+You have two tables: 
+• Books with columns: book_id, author_id, title, price. 
+• Sales with columns: sale_id, book_id, sale_date, quantity. 
+• O/P-  author_id  | total_books_sold 
+Write an SQL query to find the total number of books sold by each author. Only include authors 
+who have sold more than 100 books. 
+
+
+17. select count(*), b.author_id 
+    from books b inner join sales s
+    on b.author_id = s.book_id
+    group by author_id
+    having count(*) > 100;
+
+
+
+
